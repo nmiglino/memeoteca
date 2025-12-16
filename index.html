@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memeoteca </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="bg-image"></div>
+    
+    <div class="app-wrapper">
+        <header class="main-header">
+            <h1>Memeoteca<span>.</span></h1>
+            <p> Contenido épico destinado a gente increíble </p>
+        </header>
+
+        <div class="glass-layout">
+            <aside class="controls card-glass">
+                <div class="input-field">
+                    <label>Subí tu template</label>
+                    <input type="file" id="imageInput" class="custom-file-input">
+                </div>
+                <div class="input-field">
+                    <label>Texto Superior</label>
+                    <input type="text" id="topText" placeholder="Escribe aquí...">
+                </div>
+                <div class="input-field">
+                    <label>Texto Inferior</label>
+                    <input type="text" id="bottomText" placeholder="Y aquí también...">
+                </div>
+                <button id="downloadBtn" class="glow-button">Descargar Meme</button>
+            </aside>
+
+            <section class="preview card-glass">
+                <div class="canvas-container">
+                    <canvas id="memeCanvas"></canvas>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
