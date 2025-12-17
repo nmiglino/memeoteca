@@ -3,43 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Memeoteca </title>
+    <title>Memeoteca | Generador Pro</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body class="dark-theme">
-    <div class="bg-image"></div>
+<body>
+    <div class="bg-blur"></div>
     
-    <div class="app-wrapper">
-        <header class="main-header">
-            <h1> Memeoteca <span>.</span></h1>
-            <p> Hacé tus memes online gratis </p>
+    <div class="container">
+        <header>
+            <h1 class="title">Memeoteca</h1>
+            <p>Diseño fluido en tiempo real</p>
         </header>
 
-        <div class="glass-layout">
-            <aside class="controls card-glass">
-                <div class="input-field">
-                    <label>Subí tu template</label>
-                    <input type="file" id="imageInput" class="custom-file-input">
+        <main class="app-grid">
+            <section class="card-3d controls">
+                <div class="input-group">
+                    <label>Imagen</label>
+                    <input type="file" id="imageInput" accept="image/*">
                 </div>
-                <div class="input-field">
+
+                <div class="input-group">
                     <label>Texto Superior</label>
                     <input type="text" id="topText" placeholder="Escribe aquí...">
                 </div>
-                <div class="input-field">
-                    <label>Texto Inferior</label>
-                    <input type="text" id="bottomText" placeholder="Y aquí también...">
-                </div>
-                <button id="downloadBtn" class="glow-button">Descargar Meme</button>
-            </aside>
 
-            <section class="preview card-glass">
+                <div class="input-group">
+                    <label>Texto Inferior</label>
+                    <input type="text" id="bottomText" placeholder="Y aquí...">
+                </div>
+
+                <div class="settings-row">
+                    <div class="input-group">
+                        <label>Tipografía</label>
+                        <select id="fontFamily">
+                            <option value="Impact">Classic</option>
+                            <option value="'Outfit', sans-serif">Modern</option>
+                            <option value="'Comic Sans MS', cursive">Funny</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Color</label>
+                        <input type="color" id="textColor" value="#ffffff">
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button id="downloadBtn" class="btn-primary">Descargar</button>
+                    <button id="resetBtn" class="btn-secondary">Limpiar</button>
+                </div>
+            </section>
+
+            <section class="card-3d preview">
                 <div class="canvas-container">
                     <canvas id="memeCanvas"></canvas>
                 </div>
             </section>
-        </div>
+        </main>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
